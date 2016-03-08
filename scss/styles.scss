@@ -1,0 +1,11 @@
+$main-color: #333;
+
+ul {
+	font-size: 13px;
+	li {
+		background-color: red;
+		&:hover {
+			color: $main-color;
+		}
+	}
+}

@@ -4,39 +4,11 @@
 
 .divider-clearfix { clear: both; }
 
-@mixin header--button($button-color: $main-background) {
-	padding-right: 45px;
-	position: relative;
-	background-color: $button-color;
-}
-
-@mixin triangle($tricolor) {
-	content: "";
-	position: relative;
-	right: -30px;
-	top: 11px;
-	border: 5px solid transparent;
-	border-top: 5px solid $tricolor;
-}
-
-@mixin article--crumb($crumb-color: $text-color) {
-	position: relative;
-	display: inline-block;
-	padding-right: 21px;
-	color: $crumb-color;
-}
-
 .article--crumb-slash {
 	content: "/";
 	position: absolute;
 	right: 7px;
 	color: $text-color;
-}
-
-@mixin article__box($float-side) {
-	width: 256px;
-	float: $float-side;
-	border: 1px solid #dddddd;
 }
 
 .article__inner-box {
@@ -48,6 +20,7 @@
 		background-color: $main-background;
 		color: #9999a1;
 	}
+
 .article__box-paragraph {
 	text-align: center;
 	margin: 6px auto 7px;
@@ -61,29 +34,6 @@
 }
 
 h3 { font-size: 18px;}
-
-@mixin article__text-style ($float-side,
-							$margin-left-am,
-							$color1,
-							$color2,
-							$color3,
-							$color4,
-							$color5) {
-	float: $float-side;
-	ul {
-		margin-top: 0;
-		li {
-			list-style-type: none;
-			margin-left: $margin-left-am;
-			line-height: 1.4em;
-			&:first-child {color: $color1;}
-			&:nth-child(2) {color: $color2;}
-			&:nth-child(3) {color: $color3;}
-			&:nth-child(4) {color: $color4;}
-			&:nth-child(5) {color: $color5;}
-		}
-	}
-}
 
 .article__motley-line_inner-box {
 	padding-left: 5px;
@@ -137,50 +87,26 @@ h3 { font-size: 18px;}
 	}
 }
 
-@mixin load-bar($color-bar) {
-	background-color: $main-background;
+.footer__top_box {
+	display: inline-block;
+	width: 25%;
+	height: 37px;
+	font-size: 0;
 	div {
 		display: inline-block;
-		width: 55%;
-		font-size: 13px;
-		text-align: center;
-		color: #ffffff;
-		background-color: $color-bar;
+		font-size: 14px;
+		&:nth-child(2) { color: #0077dd; }
+		&:nth-child(3) { color: #9999a1; }
 	}
 }
 
-@mixin input-field ($form-color,
-					$form-background,
-					$form-border-color) {
-	padding: 8px 8px 6px;
-	margin-bottom: 15px;
-	color: $form-color;
-	background-color: $form-background;
-	border: 1px solid $form-border-color;
-}
-
-@mixin input-form ($form-width,
-					$form-height,
-					$form-font-size,
-					$form-bord-color) {
-	display: inline-block;
-	width: $form-width;
-	height: $form-height;
-	line-height: $form-height;
-	font-size: $form-font-size;
-	padding-left: 7px;
-  	color: #999999;
-	border: 1px solid $form-bord-color;
-}
-
-@mixin input-button ($button-width,
-					$button-height,
-					$form-font-size) {
-	display: inline-block;
-	width: $button-width;
-	height: $button-height;
-	line-height: $button-height;
-	font-size: $form-font-size;
-	text-align: center;
-	background-color: $main-background;
+.footer__bottom_box {
+	float: left;
+	width: 25%;
+	box-sizing: border-box;
+	padding: 0 34px;
+	border-left: 1px solid #e1e1e1;
+	div {
+		padding: 6px;
+	}
 }
